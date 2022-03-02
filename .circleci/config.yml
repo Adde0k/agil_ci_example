@@ -4,11 +4,14 @@ orbs:
   node: circleci/node@4.7
 
 workflows:
-  sample:
+  test-and-deploy:
     jobs:
       - node/test:
           version: '16.10'
           pkg-manager: npm
+      - build-and-deploy:
+          requires:
+            - node/test
 
 jobs:
   build-and-deploy:
