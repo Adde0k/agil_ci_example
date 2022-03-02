@@ -29,11 +29,7 @@ describe("Translators", function () {
         })
         it("should work for regular input", function () {
             const input = "Hejsan hoppsan!"
-            assert.strictEqual(toAllsprak(input), input)
-        })
-        it("should work for robber language", function () {
-            const input = "Hejsan hoppsan!"
-            assert.strictEqual(toNormal(toAllsprak(input)), input)
+            assert.strictEqual(toAllsprak(input), "Hallejsan halloppsan!")
         })
     })
 })
